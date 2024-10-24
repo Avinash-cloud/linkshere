@@ -23,7 +23,7 @@ export default function user() {
         try {
             // Encrypt the userData.code using AES
             const encryptedCode = CryptoJS.AES.encrypt(userData.code.toString(), secretKey).toString();
-            const linkToCopy = `http://localhost:3000/product/${encodeURIComponent(encryptedCode)}`; // Create the link
+            const linkToCopy = `https://linkshere.vercel.app/product/${encodeURIComponent(encryptedCode)}`; // Create the link
 
             // Check if the clipboard API is supported
             if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -46,7 +46,7 @@ export default function user() {
         try {
             // Encrypt the userData.code using AES
             const encryptedCode = CryptoJS.AES.encrypt(userData.code.toString(), secretKey).toString();
-            const linkToShare = `http://localhost:3000/product/${encodeURIComponent(encryptedCode)}`; // Create the link
+            const linkToShare = `https://linkshere.vercel.app/product/${encodeURIComponent(encryptedCode)}`; // Create the link
 
             if (navigator.share) {
                 // Use Web Share API if available
